@@ -2,7 +2,7 @@
 title: Live Talk : 그로스 해킹, 데이터를 기반으로 성장하기
 description: 
 published: true
-date: 2023-05-02T13:02:02.457Z
+date: 2023-05-02T13:03:40.208Z
 tags: data, growth-hacking, da
 editor: markdown
 dateCreated: 2023-05-02T13:02:02.457Z
@@ -73,7 +73,7 @@ KPI Dashboard
     e.g. 새로 런칭한 구매 전환율 개선 A/B 테스트가 성공했어요.
     
 
-### Based on Customer Behavior
+#### Based on Customer Behavior
 
 - 고객들은 어떻게 서비스를 사용하겠다고 결정하는가?
 - 올바른 지표를 수집해야함
@@ -83,7 +83,7 @@ KPI Dashboard
 - Observatrion, Do not Guess.
 <br>
 
-## JTBD ; Jobs to be Done
+### JTBD ; Jobs to be Done
 
 McDonald는 어떻게 밀크쉐이크 매출을 7배 상승시켰을까요?
 
