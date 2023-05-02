@@ -2,7 +2,7 @@
 title: Growth Hacking, 라이언 홀리데이
 description: 
 published: true
-date: 2023-05-02T12:55:53.213Z
+date: 2023-05-02T13:11:50.474Z
 tags: data, growth-hacking, da
 editor: markdown
 dateCreated: 2023-05-02T12:55:53.213Z
@@ -22,7 +22,7 @@ dateCreated: 2023-05-02T12:55:53.213Z
 > - Aaron Ginn
  
 
-# 새로운 방식
+## 새로운 방식
 
 최초의 바이럴 마케팅 사고 흐름
 
