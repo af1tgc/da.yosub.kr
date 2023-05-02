@@ -2,7 +2,7 @@
 title: Live Talk : 그로스 해킹, 데이터를 기반으로 성장하기
 description: 
 published: true
-date: 2023-05-02T13:03:40.208Z
+date: 2023-05-02T13:05:27.723Z
 tags: data, growth-hacking, da
 editor: markdown
 dateCreated: 2023-05-02T13:02:02.457Z
@@ -33,7 +33,7 @@ dateCreated: 2023-05-02T13:02:02.457Z
 
 <br>
 
-## Why Funnel is Important?
+# Why Funnel is Important?
 
 - 유입에서 수익의 Conversion, 어디가 잘못된 것인지?
 - AARRR은 매일 이해하고 작업할 수 있는 방식으로 설계
@@ -47,9 +47,9 @@ e.g. 매출이 떨어졌다.
 이때, `최근 30일 주문평균 금액`, `최근 30일 유입채널별 총 주문건수`, `최근 30일 카테고리별 총 주문건수`, `최근 30일 첫 구매자수` 와 같은 부분을 보고 있으면 매출 저하의 원인을 빠르게 찾을 수 있음.
 <br>
 
-## What Makes A Good Growth Funnels?
+# What Makes A Good Growth Funnels?
 
-### OMTM ; One Metric That Matters
+## OMTM ; One Metric That Matters
 
 현재의 비지니스 포인트에서 집중해야하는 것들, 재구매율을 높이는 것과 같은 것들이 OMTM이 될 수 있다.
 
@@ -73,7 +73,7 @@ KPI Dashboard
     e.g. 새로 런칭한 구매 전환율 개선 A/B 테스트가 성공했어요.
     
 
-#### Based on Customer Behavior
+### Based on Customer Behavior
 
 - 고객들은 어떻게 서비스를 사용하겠다고 결정하는가?
 - 올바른 지표를 수집해야함
@@ -83,7 +83,7 @@ KPI Dashboard
 - Observatrion, Do not Guess.
 <br>
 
-### JTBD ; Jobs to be Done
+## JTBD ; Jobs to be Done
 
 McDonald는 어떻게 밀크쉐이크 매출을 7배 상승시켰을까요?
 
@@ -105,7 +105,7 @@ e.g. 한국 20대 여성과 영국 40대 여성의 인스타 사용 동기는 �
 	- 반복적, 정기적인 실험이 셋팅되어야 함
 ```
 
-#### JTBD of LinkedIn
+### JTBD of LinkedIn
 
 - 일자리를 찾고 채용되기 위해
     - 채용 관리자와 연락이 닿을 수 있도록함
@@ -127,7 +127,7 @@ e.g. 한국 20대 여성과 영국 40대 여성의 인스타 사용 동기는 �
 - Understanding User's Lifecycle
 - Engagement Matrix
 
-#### 코호트(동질 집단) 분석?
+### 코호트(동질 집단) 분석?
 
 특정 기간 동안 공통된 특성이나 경험을 갖는 사용자 집단
 
