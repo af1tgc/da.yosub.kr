@@ -2,7 +2,7 @@
 title: Growth Hacking, 라이언 홀리데이
 description: 
 published: true
-date: 2023-05-02T13:11:50.474Z
+date: 2023-05-02T13:12:21.753Z
 tags: data, growth-hacking, da
 editor: markdown
 dateCreated: 2023-05-02T12:55:53.213Z
@@ -35,7 +35,8 @@ Hot Mail
 ```
         💡 P.S. : I love you. Get your free e-mail at Hotmail.
 ```
-    또한, 핫메일 이용자의 이메일은 핫메일을 광고하는 효과를 낳았음
+   
+또한, 핫메일 이용자의 이메일은 핫메일을 광고하는 효과를 낳았음
     
 ---
 
