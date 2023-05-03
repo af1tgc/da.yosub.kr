@@ -2,7 +2,7 @@
 title: Airflow
 description: 
 published: true
-date: 2023-04-28T05:41:02.102Z
+date: 2023-05-03T06:04:47.749Z
 tags: engineering, data, dataflow
 editor: markdown
 dateCreated: 2023-04-28T05:05:13.715Z
@@ -58,3 +58,19 @@ load_examples = False
 	...
 ```
 
+## Airflow API Enable
+```
+[api]
+# auth_backend = airflow.api.auth.backend.deny_all
+auth_backend = airflow.api.auth.backend.basic_auth
+```
+
+## Run DAGs
+```shell
+curl -X POST  \
+	'http://0.0.0.0:8988/api/v1/dags/{$DAG_ID}/dagRuns' \
+	--user "admin:{$PASSWORD}" \
+	--header 'Content-Type: application/json' \
+	--header 'Cache-Control: no-cache' \
+	--data '{"conf": { }}'
+```
