@@ -2,7 +2,7 @@
 title: Airflow
 description: 
 published: true
-date: 2023-05-03T06:04:47.749Z
+date: 2023-05-03T06:20:50.782Z
 tags: engineering, data, dataflow
 editor: markdown
 dateCreated: 2023-04-28T05:05:13.715Z
@@ -56,6 +56,103 @@ dags_folder = {$}/dags
 	...
 load_examples = False
 	...
+```
+
+## Maria DB 연동
+### Maria DB 설치 
+JSON type 사용으로 버젼에 유의가 필요함
+```shell
+curl -LsS -O https://downloads.mariadb.com/MariaDB/mariadb_repo_setup
+```
+
+```shell
+sudo bash mariadb_repo_setup --mariadb-server-version=10.9
+```
+
+```shell
+sudo yum makecache fast
+```
+
+```shell
+sudo yum -y install MariaDB-server MariaDB-client MariaDB-backup
+```
+
+```shell
+sudo rpm -qi MariaDB-server
+```
+
+```shell
+sudo systemctl enable --now mariadb
+```
+
+```shell
+sudo mariadb-secure-installation
+```
+
+### Maria DB 설정
+sql_alchemy_conn 설정에 encoding 을 설정해주지 않으면, 다음 에러 발생 `(2019, "Can't initialize character set utf-8 (path: /usr/share/mysql/charsets/)")`
+
+#### utf-8 character-set 설정
+```shell
+# sudo vi /etc/my.cnf.d/client.cnf
+
+[client]
+default-character-set=utf8
+```
+
+```shell
+# sudo vi /etc/my.cnf.d/mysql-clients.cnf
+
+[mysql]
+default-character-set=utf8
+
+[mysqldump]
+default-character-set=utf8
+```
+
+```shell
+# sudo vi /etc/my.cnf.d/server.cnf
+
+[mysqld]
+collation-server = utf8_unicode_ci
+init-connect='SET NAMES utf8'
+character-set-server = utf8
+
+[mariadb]
+character-set-client-handshake=FALSE
+init_connect="SET collation_connection = utf8_general_ci"
+init_connect="SET NAMES utf8"
+character-set-server = utf8
+collation-server = utf8_general_ci
+```
+
+```shell
+sudo systemctl restart mariadb.service
+```
+
+---
+
+```shell
+mysql -u root -p
+```
+
+```sql
+create database airflow;
+grant all privileges on airflow.* to root@localhost;
+```
+
+---
+
+```shell
+# vi $AIRFLOW_HOME/airflow.cfg
+
+[database]
+sql_alchemy_conn = mysql://root:{$PASSWORD}@localhost:3306/airflow?charset=utf8mb3
+sql_engine_encoding = utf8
+```
+
+```shell
+airflow db init
 ```
 
 ## Airflow API Enable
