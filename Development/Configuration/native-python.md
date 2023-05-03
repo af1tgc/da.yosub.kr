@@ -2,7 +2,7 @@
 title: Change Version of Native Python
 description: 
 published: true
-date: 2023-05-03T02:17:04.219Z
+date: 2023-05-03T02:30:58.426Z
 tags: configuration, linux, python
 editor: markdown
 dateCreated: 2023-05-03T01:52:42.660Z
@@ -37,7 +37,7 @@ cd Python-3.10.0
 ```
 
 ```shell
-./configure --enable-optimizations
+sudo ./configure --enable-optimizations
 ```
 
 ```shell
