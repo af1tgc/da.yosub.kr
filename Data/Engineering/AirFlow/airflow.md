@@ -2,7 +2,7 @@
 title: Airflow
 description: 
 published: true
-date: 2023-05-03T06:20:50.782Z
+date: 2023-05-03T06:26:09.655Z
 tags: engineering, data, dataflow
 editor: markdown
 dateCreated: 2023-04-28T05:05:13.715Z
@@ -28,7 +28,6 @@ airflow db init
 Airflow Scheduler를 실행한다.
 ```shell
 airflow scheduler
-#inline으로 동작하는 방법이다. Production Daemonize는 추후 업데이트
 ```
 
 Airflow USER를 생성하고 webserver를 시작해본다.
@@ -139,6 +138,7 @@ mysql -u root -p
 ```sql
 create database airflow;
 grant all privileges on airflow.* to root@localhost;
+flush privileges;
 ```
 
 ---
@@ -170,4 +170,69 @@ curl -X POST  \
 	--header 'Content-Type: application/json' \
 	--header 'Cache-Control: no-cache' \
 	--data '{"conf": { }}'
+```
+
+## Daemonize
+
+```shell
+cd /etc/systemd/system
+```
+
+```shell
+# sudo vi airflow-webserver.service
+
+[Unit]
+Description=Airflow webserver daemon
+After=network.target mysql.service
+wants=mysql.service
+
+[Service]
+Environment="PATH=/home/centos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+User=ubuntu
+Group=ubuntu
+Type=simple
+ExecStart=$AIRFLOW_HOME/airflow webserver -p 8080
+Restart=on-failure
+RestartSec=5s
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```shell
+sudo vi airflow-scheduler.service
+
+[Unit]
+Description=Airflow webserver daemon
+After=network.target mysql.service
+wants=mysql.service
+
+[Service]
+Environment="PATH=/home/centos/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+User=ubuntu
+Group=ubuntu
+Type=simple
+ExecStart=$AIRFLOW_HOME/airflow scheduler
+Restart=on-failure
+RestartSec=5s
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+```
+
+```shell
+sudo systemctl daemon-reload
+sudo systemctl enable airflow-webserver
+sudo systemctl enable airflow-scheduler
+```
+
+```shell
+sudo systemctl start airflow-webserver
+sudo systemctl start airflow-scheduler
+```
+
+```shell
+sudo systemctl status airflow-webserver
 ```
