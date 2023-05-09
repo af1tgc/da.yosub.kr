@@ -2,7 +2,7 @@
 title: Unity
 description: 
 published: true
-date: 2023-05-09T07:51:16.778Z
+date: 2023-05-09T08:17:22.782Z
 tags: development, unity, c#
 editor: markdown
 dateCreated: 2023-05-09T07:51:16.778Z
@@ -12,6 +12,8 @@ dateCreated: 2023-05-09T07:51:16.778Z
 ## Unity 설치
 [unity 공식 페이지](https://unity.com/kr/download)에서 unity hub 다운로드 및 설치
 완료되면 unity 버젼 선택 후, 설치 진행
+
+> mac dll 파일 생성 이슈로, native unity로 변경하여 설치
 
 ## Mono 설치
 [mono 공식 페이지](https://www.mono-project.com/download/stable/)에서 mono 다운로드 및 설치
