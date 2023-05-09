@@ -2,7 +2,7 @@
 title: Airflow with Docker
 description: 
 published: true
-date: 2023-05-08T05:37:41.703Z
+date: 2023-05-09T01:50:03.414Z
 tags: dataflow, airflow, docker
 editor: markdown
 dateCreated: 2023-05-08T05:37:41.703Z
@@ -54,6 +54,7 @@ services:
 ```
 
 기본 설정 port 는 8080이며, 외부로 통신하는 포트를 변경하기 위해 호스트 port 바인딩 설정을 변경한다.
+- $HOST_PORT : $CONTAINER_PORT
 ```shell
 services:
   airflow-webserver:
