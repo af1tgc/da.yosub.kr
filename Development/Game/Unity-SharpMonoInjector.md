@@ -2,7 +2,7 @@
 title: Unity - SharpMonoInjector
 description: 
 published: true
-date: 2023-05-10T05:40:44.124Z
+date: 2023-05-10T05:45:56.579Z
 tags: security, unity, mono, injector
 editor: markdown
 dateCreated: 2023-05-10T05:40:23.017Z
@@ -25,18 +25,18 @@ dateCreated: 2023-05-10T05:40:23.017Z
    - method name 확인
 - Injector.Inject 호출
    - 프로세스내 mono.dll 에서 Function Export (`ObtainMonoExports()`)
-      - { mono_get_root_domain, IntPtr.Zero }
-      - { mono_thread_attach, IntPtr.Zero }
-      - { mono_image_open_from_data, IntPtr.Zero }
-      - { mono_assembly_load_from_full, IntPtr.Zero }
-      - { mono_assembly_get_image, IntPtr.Zero }
-      - { mono_class_from_name, IntPtr.Zero }
-      - { mono_class_get_method_from_name, IntPtr.Zero }
-      - { mono_runtime_invoke, IntPtr.Zero }
-      - { mono_assembly_close, IntPtr.Zero }
-      - { mono_image_strerror, IntPtr.Zero }
-      - { mono_object_get_class, IntPtr.Zero }
-      - { mono_class_get_name, IntPtr.Zero }
+      - mono_get_root_domain
+      - mono_thread_attach
+      - mono_image_open_from_data
+      - mono_assembly_load_from_full
+      - mono_assembly_get_image
+      - mono_class_from_name
+      - mono_class_get_method_from_name
+      - mono_runtime_invoke
+      - mono_assembly_close
+      - mono_image_strerror
+      - mono_object_get_class
+      - mono_class_get_name
    - kernel32.dll 을 import하여 CreateRemoteThread 호출
    - 재조합
    ```cs 
