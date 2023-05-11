@@ -2,7 +2,7 @@
 title: Airflow Example DAGs
 description: 
 published: true
-date: 2023-05-11T06:55:23.292Z
+date: 2023-05-11T06:57:34.018Z
 tags: engineering, data, airflow, batch
 editor: markdown
 dateCreated: 2023-05-11T06:55:23.292Z
@@ -82,7 +82,7 @@ def get_handler():
 
 
 # 1. USAGE OF THE XCOM : USE {$TASK_NAME}.task_id FOR ASSIGN THE RETURN VALUE OF {$TASK_NAME}
-# 2. BRANCH : `BranchPythonOperator` MEANS THE FUNCTION HAS CONDITION TO BRANCH : RETURN THE {$TASK_NAME}.task_id
+# 2. BRANCH : `BranchPythonOperator` MEANS THE FUNCTION HAS A CONDITION TO BRANCH : RETURN THE {$TASK_NAME}.task_id
 def condition(ti):
     element = ti.xcom_pull(task_ids=get_ticket.task_id)
 
@@ -154,7 +154,7 @@ with DAG(
         dag=dag
     )
 
-		# 1. USE [] BRACETs FOR BRANCH, OTHERWISE IT MEANS RUN TASK TO PARALLEL.
+    # 1. USE [] BRACETs FOR BRANCH, OTHERWISE IT MEANS RUN TASK TO PARALLEL.
     # 2. AFTER BRANCH TASKs, WRITE THE CODE WITH SPERATED LINES.
     get_ticket >> condition >> [true_process, false_process]
     true_process >> set_ticket # IF TRUE, THEN SKIP `false_process`
