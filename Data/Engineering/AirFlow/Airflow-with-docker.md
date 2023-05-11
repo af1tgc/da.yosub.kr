@@ -2,7 +2,7 @@
 title: Airflow with Docker
 description: 
 published: true
-date: 2023-05-09T01:50:03.414Z
+date: 2023-05-11T05:03:07.116Z
 tags: dataflow, airflow, docker
 editor: markdown
 dateCreated: 2023-05-08T05:37:41.703Z
@@ -79,3 +79,31 @@ sudo docker ps
 ```
 
 완료 후, http://{$AIRFLOW_URL}:8888 로 접속되면 성공
+
+
+# airflow.cfg 설정
+
+```bash
+# HOST
+docker exec -it docker_airflow-webserver_1 bash
+```
+
+```bash
+# Container
+cp /opt/airflow/airflow.cfg /opt/airflow/dags
+```
+
+
+```yml
+# HOST
+volumes:
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./plugins:/opt/airflow/plugins
+    - ./airflow.cfg:/opt/airflow/airflow.cfg                # add this
+```
+
+```bash
+# HOST
+docker-compose restart
+```
