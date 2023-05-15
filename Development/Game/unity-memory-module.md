@@ -2,8 +2,8 @@
 title: Unity - Checking Module on Memory, after Injection with SharpMonoInjector
 description: 
 published: true
-date: 2023-05-15T09:12:56.156Z
-tags: security, dll, dll-injection, penetration-testing
+date: 2023-05-15T09:14:31.951Z
+tags: security, c#, dll, dll-injection, penetration-testing
 editor: markdown
 dateCreated: 2023-05-15T09:11:34.286Z
 ---
