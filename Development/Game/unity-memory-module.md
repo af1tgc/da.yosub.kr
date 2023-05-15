@@ -2,14 +2,14 @@
 title: Unity - Checking Module on Memory, after Injection with SharpMonoInjector
 description: 
 published: true
-date: 2023-05-15T09:14:31.951Z
+date: 2023-05-15T09:16:23.327Z
 tags: security, c#, dll, dll-injection, penetration-testing
 editor: markdown
 dateCreated: 2023-05-15T09:11:34.286Z
 ---
 
 # SharpMonoInjector
-[SharpMonoInjector](/Development/Game/Unity-SharpMonoInjector) 구동 방식에 따라, 프로세스의 dll 리스트에서 악성 동작을 쉽게 확인할 수 없다. 조금 더 상세히 서술하자면 작성한 dll 파일이 process에 주입되는 형태가 아니라 온메모리상의 mono.dll에 작성한 module의 address로 변경하는 구조이기 때문이다.
+[SharpMonoInjector](/Development/Game/Unity-SharpMonoInjector) 구동 방식에 따라, 프로세스의 dll 리스트에서 악성 동작을 쉽게 확인할 수 없다. 조금 더 상세히 서술하자면 작성한 dll 파일이 process에 주입되는 형태가 아니라 온메모리상의 `mono.dll`에 작성한 module의 address로 변경하는 구조이기 때문이다.
 따라서, 메모리 상의 `mono.dll` 의 바이너리를 읽고 대조하는 식으로 주입이 되었음을 확인할 수 있을 것이라 판단하였다.
 
 # 코드 변경
@@ -17,8 +17,8 @@ dateCreated: 2023-05-15T09:11:34.286Z
 기본적으로 [SharpMonoInjector](/Development/Game/Unity-SharpMonoInjector) 에서 사용하는 기능을 활용하였다.
 * 프로세스를 읽어와 mono.dll을 찾고 `mono_get_root_domain`의 lpBase를 찾는다.
 * 하위 세부 모듈의 Address를 구한다.
-* 샘플 모듈을 선정한다.
-* kernel32.dll의 native function인 ReadProcessMemory()를 활용하여 변조 전 후 해당 주소값으로 부터의 1024 바이트를 확인한다.
+* 샘플 모듈을 선정한다. (`mono_class_get_method_from_name`)
+* kernel32.dll의 native function인 `ReadProcessMemory()`를 활용하여 변조 전 후 해당 주소값으로 부터의 1024 바이트를 확인한다.
 
 ## 코드 확인 및 변경
 ObtainMonoExports() 함수 시작을 기점으로 Assembly로 변환된 user dll의 주소값을 가르키게된다.
