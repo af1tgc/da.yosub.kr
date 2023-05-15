@@ -2,7 +2,7 @@
 title: Unity - Checking Module on Memory, after Injection with SharpMonoInjector
 description: 
 published: true
-date: 2023-05-15T09:11:34.286Z
+date: 2023-05-15T09:12:56.156Z
 tags: security, dll, dll-injection, penetration-testing
 editor: markdown
 dateCreated: 2023-05-15T09:11:34.286Z
@@ -146,7 +146,7 @@ public IntPtr Inject(byte[] rawAssembly, string @namespace, string className, st
 
 # mono.dll 메모리 확인
 
-> 1. 실제 코드와 변조 전/후 차이가 존재함. 정상 상태의 바이너리 값은 지속적으로 동일하며, 변조 후는 동일 기능을 수행한다하더라도 바이너리 값이 회차마다 다름을 확인.
+> 1. 실제 코드와 변조 전/후 차이가 존재함. 정상 상태의 바이너리 값은 지속적으로 동일하며, 변조 후는 동일 기능을 수행한다하더라도 바이너리 값이 회차마다 다름을 확인. (`아래 코드 블럭상 tail 확인 필요`)
 > 
 > 2. 메모리 상의 process를 읽고 로드된 mono.dll의 checksum을 비교하는 방식으로 변조 탐지가 가능할 것으로 보이나, 추가 확인이 필요할 수 있음.
 
