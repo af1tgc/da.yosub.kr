@@ -2,11 +2,14 @@
 title: Latex Guide
 description: 
 published: true
-date: 2023-05-24T07:08:41.095Z
+date: 2023-05-24T08:08:29.498Z
 tags: wikijs, latex, edit
 editor: markdown
 dateCreated: 2023-05-24T07:08:41.095Z
 ---
+
+# 개요
+본 가이드는 [latex wiki](https://ko.wikipedia.org/wiki/%EC%9C%84%ED%82%A4%EB%B0%B1%EA%B3%BC:TeX_%EB%AC%B8%EB%B2%95)의 내용을 정리하였으며, 일반 텍스트로 노출되는 구문은 본 wikijs에서 지원하지 않는 것으로 보인다.
 
 # 특수 문자
 
@@ -88,14 +91,12 @@ $$
 
 ```latex
 \sgn r, \left\vert s \right\vert 
+단, wikijs에서 \sgn 사용 불가
 ```
+
 $$
-\sgn r, \left\vert s \right\vert \!
+\left\vert s \right\vert
 $$
-
-
-
-
 
 ## 상한과 하한
 
@@ -287,10 +288,10 @@ $$
 ## 집합
 
 ```
-\{ \}, \O \empty \emptyset, \varnothing 
+\{ \}, \empty \emptyset, \varnothing 
 ```
 $$
-\{ \}, \O \empty \emptyset, \varnothing \!
+\{ \}, \empty \emptyset, \varnothing \!
 $$
 
 ```latex
@@ -811,5 +812,714 @@ $$
 ```
 $$
 \trianglelefteq \ntrianglelefteq \trianglerighteq \ntrianglerighteq \!
+$$
+
+## 위, 아래, 전치, 후치 첨자
+
+```latex
+a^2
+``` 
+$$
+a^2
+$$
+
+
+```latex
+y_m
+```
+
+$$
+y_m
+$$
+
+
+
+```latex
+x_s-x_D
+```
+
+$$
+x_s-x_D
+$$
+
+
+```latex
+a^{2+2}
+``` 
+$$
+a^{2+2}
+$$
+
+```latex
+a_{i,j}
+``` 
+$$
+a_{i,j}
+$$
+
+### 위 아래 첨자 동시에 
+```latex
+x_2^3
+``` 
+$$
+x_2^3
+$$
+
+### 위 가운데 첨자 
+```latex
+\overset{x}{P}
+``` 
+$$
+\overset{x}{P}
+$$
+
+### 전치 위,아래 첨자 동시에 
+```latex
+{}_{b}^{a}X
+``` 
+$$
+{}_{b}^{a}X
+$$
+
+### 전치,후치,위,아래 첨자 동시에 
+```latex
+_{c}^{a}Z_{d}^{b}
+``` 
+$$
+_{c}^{a}Z_{d}^{b}
+$$
+
+### 전,후치,가운데,위,아래 첨자 동시에 
+```latex
+\underset{y}{\overset{x}{_{c}^{a}Z_{d}^{b}}}
+``` 
+$$
+\underset{y}{\overset{x}{_{c}^{a}Z_{d}^{b}}}
+$$
+
+### 미분 (옳음) 
+```latex
+x'
+``` 
+$$
+x'
+$$
+
+### 미분 (HTML의 경우 틀림) 
+```latex
+x^\prime
+``` 
+$$
+x^\prime
+$$
+
+### 미분 (PNG의 경우 틀림) 
+```latex
+x\prime
+``` 
+$$
+x\prime
+$$
+
+### 시그마
+```latex
+\sum_{k=1}^N k^2
+``` 
+$$
+\sum_{k=1}^N k^2
+$$
+
+### 곱집합|곱기호
+```latex
+\prod_{i=1}^N x_i
+``` 
+$$
+\prod_{i=1}^N x_i
+$$
+
+### 극한
+```latex
+\lim_{n \to \infty}x_n
+``` 
+$$
+\lim_{n \to \infty}x_n
+$$
+
+### 적분
+```latex
+\int_{-N}^{N} e^x\, dx
+``` 
+$$
+\int_{-N}^{N} e^x\, dx
+$$
+
+### 선적분
+```latex
+\oint_{C} x^3\, dx + 4y^2\, dy
+```
+$$
+\oint_{C} x^3\, dx + 4y^2\, dy
+$$
+
+
+##  분수, 행렬, 여러행 
+
+
+### 분수 
+```latex
+\frac{2}{4}
+``` or ```latex
+{2 \over 4}
+``` 
+$$
+\frac{2}{4}
+$$
+
+### 이항 계수 
+```latex
+{n \choose k}
+``` 
+$$
+{n \choose k}
+$$
+
+### 행렬
+```latex
+\begin{pmatrix} x & y \\ z & v \end{pmatrix}
+```
+$$
+\begin{pmatrix} x & y \\ z & v \end{pmatrix}
+$$
+
+```latex
+ \begin{bmatrix}
+ 0 & \cdots & 0 \\
+ \vdots & \ddots & \vdots \\
+ 0 & \cdots & 0
+ \end{bmatrix}
+```
+$$
+ \begin{bmatrix}
+ 0 & \cdots & 0 \\
+ \vdots & \ddots & \vdots \\
+ 0 & \cdots & 0
+ \end{bmatrix}
+$$
+
+```latex
+\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}
+```
+$$
+\begin{Bmatrix} x & y \\ z & v \end{Bmatrix}
+$$
+
+```latex
+\begin{vmatrix} x & y \\ z & v \end{vmatrix}
+```
+$$
+\begin{vmatrix} x & y \\ z & v \end{vmatrix}
+$$
+
+```latex
+\begin{Vmatrix} x & y \\ z & v \end{Vmatrix}
+```
+$$
+\begin{Vmatrix} x & y \\ z & v \end{Vmatrix}
+$$
+
+```latex
+\begin{matrix} x & y \\ z & v \end{matrix}
+```
+$$
+\begin{matrix} x & y \\ z & v \end{matrix}
+$$
+
+### 경우 나누기
+
+```latex
+ f(n)=
+ \begin{cases}
+ n/2, & \mbox{if }n\mbox{ is even} \\
+ 3n+1, & \mbox{if }n\mbox{ is odd}
+ \end{cases}
+ 
+ 단, \mbox 가 wikijs에 적용되지 않아 다음 수식으로 대체
+ f(n)=
+ \begin{cases}
+ n/2 & \mathrm{if\ }\ n\ \mathrm{ is\ even} \\
+ 3n+1, & \mathrm{if\ }\ n\ \mathrm{ is\ odd}
+ \end{cases}
+```
+$$
+ f(n)=
+ \begin{cases}
+ n/2 & \mathrm{if\ }\ n\ \mathrm{ is\ even} \\
+ 3n+1, & \mathrm{if\ }\ n\ \mathrm{ is\ odd}
+ \end{cases}
+$$
+
+### 두줄 이상의 방정식
+```latex
+ \begin{matrix}
+ f(n+1) &=& (n+1)^2 \\
+        &=& n^2 + 2n + 1
+ \end{matrix}
+```
+$$
+\begin{matrix}f(n+1)&=& (n+1)^2 \\ \ & =& n^2 + 2n + 1\end{matrix}
+$$
+
+
+##  글꼴 
+
+
+### 그리스어
+
+```latex
+\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta 
+\Iota \Kappa \Lambda \Mu \Nu \Xi \Pi \Rho 
+\Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega 
+\alpha \beta \gamma \delta \epsilon \zeta \eta \theta 
+\iota \kappa \lambda \mu \nu \xi \pi \rho 
+\sigma \tau \upsilon \phi \chi \psi \omega 
+\varepsilon \digamma \varkappa \varpi 
+```
+$$
+\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta \!
+$$
+
+$$
+\Iota \Kappa \Lambda \Mu \Nu \Xi \Pi \Rho \!
+$$
+
+$$
+\Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega \!
+$$
+
+$$
+\alpha \beta \gamma \delta \epsilon \zeta \eta \theta \!
+$$
+
+$$
+\iota \kappa \lambda \mu \nu \xi \pi \rho \!
+$$
+
+$$
+\sigma \tau \upsilon \phi \chi \psi \omega \!
+$$
+
+$$
+\varepsilon \digamma \varkappa \varpi \!
+$$
+
+$$
+\varrho \varsigma \vartheta \varphi \!
+$$
+
+### 히브리어
+
+```latex
+\aleph \beth \gimel \daleth 
+```
+$$
+\aleph \beth \gimel \daleth \!
+$$
+
+### 칠판체 로마자
+
+```latex
+\mathbb{ABCDEFGHI} 
+\mathbb{JKLMNOPQR} 
+\mathbb{STUVWXYZ} 
+```
+$$
+\mathbb{ABCDEFGHI} \!
+$$
+
+$$
+\mathbb{JKLMNOPQR} \!
+$$
+
+$$
+\mathbb{STUVWXYZ} \!
+$$
+
+### 볼드체 로마자
+
+```latex
+\mathbf{ABCDEFGHI} 
+\mathbf{JKLMNOPQR} 
+\mathbf{STUVWXYZ} 
+\mathbf{abcdefghijklm} 
+\mathbf{nopqrstuvwxyz} 
+\mathbf{0123456789} 
+```
+$$
+\mathbf{ABCDEFGHI} \!
+$$
+
+$$
+\mathbf{JKLMNOPQR} \!
+$$
+
+$$
+\mathbf{STUVWXYZ} \!
+$$
+
+$$
+\mathbf{abcdefghijklm} \!
+$$
+
+$$
+\mathbf{nopqrstuvwxyz} \!
+$$
+
+$$
+\mathbf{0123456789} \!
+$$
+
+### 볼드체 그리스어
+
+```latex
+\boldsymbol{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} 
+\boldsymbol{\Iota\Kappa\Lambda\Mu\Nu\Xi\Pi\Rho} 
+\boldsymbol{\Sigma\Tau\Upsilon\Phi\Chi\Psi\Omega} 
+\boldsymbol{\alpha\beta\gamma\delta\epsilon\zeta\eta\theta} 
+\boldsymbol{\iota\kappa\lambda\mu\nu\xi\pi\rho} 
+\boldsymbol{\sigma\tau\upsilon\phi\chi\psi\omega} 
+\boldsymbol{\varepsilon\digamma\varkappa\varpi} 
+\boldsymbol{\varrho\varsigma\vartheta\varphi} 
+```
+$$
+\boldsymbol{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} \!
+$$
+
+$$
+\boldsymbol{\Iota\Kappa\Lambda\Mu\Nu\Xi\Pi\Rho} \!
+$$
+
+$$
+\boldsymbol{\Sigma\Tau\Upsilon\Phi\Chi\Psi\Omega} \!
+$$
+
+$$
+\boldsymbol{\alpha\beta\gamma\delta\epsilon\zeta\eta\theta} \!
+$$
+
+$$
+\boldsymbol{\iota\kappa\lambda\mu\nu\xi\pi\rho} \!
+$$
+
+$$
+\boldsymbol{\sigma\tau\upsilon\phi\chi\psi\omega} \!
+$$
+
+$$
+\boldsymbol{\varepsilon\digamma\varkappa\varpi} \!
+$$
+
+$$
+\boldsymbol{\varrho\varsigma\vartheta\varphi} \!
+$$
+
+### 기울임체 로마자
+
+```latex
+\mathit{0123456789} 
+```
+$$
+\mathit{0123456789} \!
+$$
+
+### 기울임체 그리스어
+
+```latex
+\mathit{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} 
+\mathit{\Iota\Kappa\Lambda\Mu\Nu\Xi\Pi\Rho} 
+\mathit{\Sigma\Tau\Upsilon\Phi\Chi\Psi\Omega} 
+```
+$$
+\mathit{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} \!
+$$
+
+$$
+\mathit{\Iota\Kappa\Lambda\Mu\Nu\Xi\Pi\Rho} \!
+$$
+
+$$
+\mathit{\Sigma\Tau\Upsilon\Phi\Chi\Psi\Omega} \!
+$$
+
+### 로만체
+
+```latex
+\mathrm{ABCDEFGHI} 
+\mathrm{JKLMNOPQR} 
+\mathrm{STUVWXYZ} 
+\mathrm{abcdefghijklm} 
+\mathrm{nopqrstuvwxyz} 
+\mathrm{0123456789} 
+```
+$$
+\mathrm{ABCDEFGHI} \!
+$$
+
+$$
+\mathrm{JKLMNOPQR} \!
+$$
+
+$$
+\mathrm{STUVWXYZ} \!
+$$
+
+$$
+\mathrm{abcdefghijklm} \!
+$$
+
+$$
+\mathrm{nopqrstuvwxyz} \!
+$$
+
+$$
+\mathrm{0123456789} \!
+$$
+
+### 산세리프체
+
+```latex
+\mathsf{ABCDEFGHI} 
+\mathsf{JKLMNOPQR} 
+\mathsf{STUVWXYZ} 
+\mathsf{abcdefghijklm} 
+\mathsf{nopqrstuvwxyz} 
+\mathsf{0123456789} 
+```
+$$
+\mathsf{ABCDEFGHI} \!
+$$
+
+$$
+\mathsf{JKLMNOPQR} \!
+$$
+
+$$
+\mathsf{STUVWXYZ} \!
+$$
+
+$$
+\mathsf{abcdefghijklm} \!
+$$
+
+$$
+\mathsf{nopqrstuvwxyz} \!
+$$
+
+$$
+\mathsf{0123456789} \!
+$$
+
+### 산세리프체 그리스어
+
+```latex
+\mathsf{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta} 
+\mathsf{\Iota \Kappa \Lambda \Mu \Nu \Xi \Pi \Rho} 
+\mathsf{\Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}
+```
+$$
+\mathsf{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta} \!
+$$
+
+$$
+\mathsf{\Iota \Kappa \Lambda \Mu \Nu \Xi \Pi \Rho} \!
+$$
+
+$$
+\mathsf{\Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}\!
+$$
+
+### 흘림체
+
+```latex
+\mathcal{ABCDEFGHI} 
+\mathcal{JKLMNOPQR} 
+\mathcal{STUVWXYZ} 
+```
+$$
+\mathcal{ABCDEFGHI} \!
+$$
+
+$$
+\mathcal{JKLMNOPQR} \!
+$$
+
+$$
+\mathcal{STUVWXYZ} \!
+$$
+
+### 흑자체
+
+```latex
+\mathfrak{ABCDEFGHI} 
+\mathfrak{JKLMNOPQR} 
+\mathfrak{STUVWXYZ} 
+\mathfrak{abcdefghijklm} 
+\mathfrak{nopqrstuvwxyz} 
+\mathfrak{0123456789} 
+```
+$$
+\mathfrak{ABCDEFGHI} \!
+$$
+$$
+\mathfrak{JKLMNOPQR} \!
+$$
+$$
+\mathfrak{STUVWXYZ} \!
+$$
+$$
+\mathfrak{abcdefghijklm} \!
+$$
+$$
+\mathfrak{nopqrstuvwxyz} \!
+$$
+$$
+\mathfrak{0123456789} \!
+$$
+
+
+### 작은 글자
+
+```latex
+{\scriptstyle\text{abcdefghijklm}}
+```
+$$
+{\scriptstyle\text{abcdefghijklm}}
+$$
+
+
+##  괄호 쓰기 
+```latex
+\left ( \frac{1}{2} \right )
+```
+$$
+\left ( \frac{1}{2} \right )
+$$
+
+> `\left` 와 `\right` 를 사용하여, 여러가지 괄호를 사용할 수 있습니다. 
+
+
+### 괄호
+```latex
+\left( A \right)
+``` 
+$$
+\left( A \right)
+$$
+
+### 사각 괄호 
+```latex
+\left[ A \right]
+``` 
+$$
+\left[ A \right]
+$$
+
+### 집합괄호
+```latex
+\left\{ A \right\}
+```
+$$
+\left\{ A \right\}
+$$
+
+### 부등호 괄호 
+```latex
+\left\langle A \right\rangle
+```
+$$
+\left\langle A \right\rangle
+$$
+
+### 바 
+```latex
+\left| A \right|
+```
+$$
+\left| A \right|
+$$
+
+### `\left.` 혹은 `\right.` 라고 쓰면, 그 쪽 괄호는 나타나지 않습니다.
+```latex
+\left. {A \over B} \right\} \to X
+```
+$$
+\left. {A \over B} \right\} \to X
+$$
+
+### 내림수와 올림수 기호
+```latex
+\lfloor\sqrt{n}\rfloor  \lceil\sqrt{n}\rceil
+```
+$$
+\lfloor\sqrt{n}\rfloor \quad \lceil\sqrt{n}\rceil
+$$
+
+
+##  빈칸 조정 
+TeX은 빈칸의 크기를 자동으로 조정합니다. 특별히 조정이 필요한 경우는 다음을 사용하면 됩니다.
+
+### double quad space 
+```latex
+a \qquad b
+``` 
+$$
+a \qquad b
+$$
+
+### quad space 
+```latex
+a \quad b
+``` 
+$$
+a \quad b
+$$
+
+### text space 
+```latex
+a\ b
+``` 
+$$
+a\ b
+$$
+
+### large space 
+```latex
+a\;b
+``` 
+$$
+a\;b
+$$
+
+### small space 
+```latex
+a\,b
+``` 
+$$
+a\,b
+$$
+
+### no space 
+```latex
+ab
+``` 
+$$
+ab\,
+$$
+
+### negative space 
+```latex
+a\!b
+``` 
+$$
+a\!b
 $$
 
