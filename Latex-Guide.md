@@ -2,7 +2,7 @@
 title: Latex Guide
 description: 
 published: true
-date: 2023-05-24T08:19:14.411Z
+date: 2023-05-24T08:27:00.158Z
 tags: wikijs, latex, edit
 editor: markdown
 dateCreated: 2023-05-24T07:08:41.095Z
@@ -15,21 +15,21 @@ dateCreated: 2023-05-24T07:08:41.095Z
 
 ## 구별 부호
 
-```
+```latex
 \dot{a}, \ddot{a}, \acute{a}, \grave{a} 
 ```
 $$
 \dot{a}, \ddot{a}, \acute{a}, \grave{a} \!
 $$
 
-```
+```latex
 \check{a}, \breve{a}, \tilde{a}, \bar{a} 
 ```
 $$
 \check{a}, \breve{a}, \tilde{a}, \bar{a} \!
 $$
 
-```
+```latex
 \hat{a}, \widehat{a}, \vec{a} 
 ```
 $$
@@ -75,14 +75,14 @@ $$
 \sinh k, \cosh l, \tanh m, \coth n \!
 $$
 
-```
+```latex
 \operatorname{sh}\,k, \operatorname{ch}\,l, \operatorname{th}\,m, \operatorname{coth}\,n 
 ```
 $$
 \operatorname{sh}\,k, \operatorname{ch}\,l, \operatorname{th}\,m, \operatorname{coth}\,n \!
 $$
 
-```
+```latex
 \operatorname{argsh}\,o, \operatorname{argch}\,p, \operatorname{argth}\,q 
 ```
 $$
@@ -287,7 +287,7 @@ $$
 
 ## 집합
 
-```
+```latex
 \{ \}, \empty \emptyset, \varnothing 
 ```
 $$
@@ -818,7 +818,7 @@ $$
 \trianglelefteq \ntrianglelefteq \trianglerighteq \ntrianglerighteq \!
 $$
 
-## 위, 아래, 전치, 후치 첨자
+# 위, 아래, 전치, 후치 첨자
 
 ```latex
 a^2
@@ -861,7 +861,7 @@ $$
 a_{i,j}
 $$
 
-### 위 아래 첨자 동시에 
+## 위 아래 첨자 동시에 
 ```latex
 x_2^3
 ``` 
@@ -869,7 +869,7 @@ $$
 x_2^3
 $$
 
-### 위 가운데 첨자 
+## 위 가운데 첨자 
 ```latex
 \overset{x}{P}
 ``` 
@@ -877,7 +877,7 @@ $$
 \overset{x}{P}
 $$
 
-### 전치 위,아래 첨자 동시에 
+## 전치 위,아래 첨자 동시에 
 ```latex
 {}_{b}^{a}X
 ``` 
@@ -885,7 +885,7 @@ $$
 {}_{b}^{a}X
 $$
 
-### 전치,후치,위,아래 첨자 동시에 
+## 전치,후치,위,아래 첨자 동시에 
 ```latex
 _{c}^{a}Z_{d}^{b}
 ``` 
@@ -893,7 +893,7 @@ $$
 _{c}^{a}Z_{d}^{b}
 $$
 
-### 전,후치,가운데,위,아래 첨자 동시에 
+## 전,후치,가운데,위,아래 첨자 동시에 
 ```latex
 \underset{y}{\overset{x}{_{c}^{a}Z_{d}^{b}}}
 ``` 
@@ -901,7 +901,7 @@ $$
 \underset{y}{\overset{x}{_{c}^{a}Z_{d}^{b}}}
 $$
 
-### 미분 (옳음) 
+## 미분 (옳음) 
 ```latex
 x'
 ``` 
@@ -909,7 +909,7 @@ $$
 x'
 $$
 
-### 미분 (HTML의 경우 틀림) 
+## 미분 (HTML의 경우 틀림) 
 ```latex
 x^\prime
 ``` 
@@ -917,7 +917,7 @@ $$
 x^\prime
 $$
 
-### 미분 (PNG의 경우 틀림) 
+## 미분 (PNG의 경우 틀림) 
 ```latex
 x\prime
 ``` 
@@ -925,7 +925,7 @@ $$
 x\prime
 $$
 
-### 시그마
+## 시그마
 ```latex
 \sum_{k=1}^N k^2
 ``` 
@@ -933,7 +933,7 @@ $$
 \sum_{k=1}^N k^2
 $$
 
-### 곱집합|곱기호
+## 곱집합|곱기호
 ```latex
 \prod_{i=1}^N x_i
 ``` 
@@ -941,7 +941,7 @@ $$
 \prod_{i=1}^N x_i
 $$
 
-### 극한
+## 극한
 ```latex
 \lim_{n \to \infty}x_n
 ``` 
@@ -949,7 +949,7 @@ $$
 \lim_{n \to \infty}x_n
 $$
 
-### 적분
+## 적분
 ```latex
 \int_{-N}^{N} e^x\, dx
 ``` 
@@ -957,7 +957,7 @@ $$
 \int_{-N}^{N} e^x\, dx
 $$
 
-### 선적분
+## 선적분
 ```latex
 \oint_{C} x^3\, dx + 4y^2\, dy
 ```
@@ -966,10 +966,10 @@ $$
 $$
 
 
-##  분수, 행렬, 여러행 
+#  분수, 행렬, 여러행 
 
 
-### 분수 
+## 분수 
 ```latex
 \frac{2}{4}
 ``` or ```latex
@@ -979,7 +979,7 @@ $$
 \frac{2}{4}
 $$
 
-### 이항 계수 
+## 이항 계수 
 ```latex
 {n \choose k}
 ``` 
@@ -987,7 +987,7 @@ $$
 {n \choose k}
 $$
 
-### 행렬
+## 행렬
 ```latex
 \begin{pmatrix} x & y \\ z & v \end{pmatrix}
 ```
@@ -1038,7 +1038,7 @@ $$
 \begin{matrix} x & y \\ z & v \end{matrix}
 $$
 
-### 경우 나누기
+## 경우 나누기
 
 ```latex
  f(n)=
@@ -1062,7 +1062,7 @@ $$
  \end{cases}
 $$
 
-### 두줄 이상의 방정식
+## 두줄 이상의 방정식
 ```latex
  \begin{matrix}
  f(n+1) &=& (n+1)^2 \\
@@ -1074,10 +1074,10 @@ $$
 $$
 
 
-##  글꼴 
+#  글꼴 
 
 
-### 그리스어
+## 그리스어
 
 ```latex
 \Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta 
@@ -1120,7 +1120,7 @@ $$
 \varrho \varsigma \vartheta \varphi \!
 $$
 
-### 히브리어
+## 히브리어
 
 ```latex
 \aleph \beth \gimel \daleth 
@@ -1129,7 +1129,7 @@ $$
 \aleph \beth \gimel \daleth \!
 $$
 
-### 칠판체 로마자
+## 칠판체 로마자
 
 ```latex
 \mathbb{ABCDEFGHI} 
@@ -1148,7 +1148,7 @@ $$
 \mathbb{STUVWXYZ} \!
 $$
 
-### 볼드체 로마자
+## 볼드체 로마자
 
 ```latex
 \mathbf{ABCDEFGHI} 
@@ -1182,7 +1182,7 @@ $$
 \mathbf{0123456789} \!
 $$
 
-### 볼드체 그리스어
+## 볼드체 그리스어
 
 ```latex
 \boldsymbol{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} 
@@ -1226,7 +1226,7 @@ $$
 \boldsymbol{\varrho\varsigma\vartheta\varphi} \!
 $$
 
-### 기울임체 로마자
+## 기울임체 로마자
 
 ```latex
 \mathit{0123456789} 
@@ -1235,7 +1235,7 @@ $$
 \mathit{0123456789} \!
 $$
 
-### 기울임체 그리스어
+## 기울임체 그리스어
 
 ```latex
 \mathit{\Alpha\Beta\Gamma\Delta\Epsilon\Zeta\Eta\Theta} 
@@ -1254,7 +1254,7 @@ $$
 \mathit{\Sigma\Tau\Upsilon\Phi\Chi\Psi\Omega} \!
 $$
 
-### 로만체
+## 로만체
 
 ```latex
 \mathrm{ABCDEFGHI} 
@@ -1288,7 +1288,7 @@ $$
 \mathrm{0123456789} \!
 $$
 
-### 산세리프체
+## 산세리프체
 
 ```latex
 \mathsf{ABCDEFGHI} 
@@ -1322,7 +1322,7 @@ $$
 \mathsf{0123456789} \!
 $$
 
-### 산세리프체 그리스어
+## 산세리프체 그리스어
 
 ```latex
 \mathsf{\Alpha \Beta \Gamma \Delta \Epsilon \Zeta \Eta \Theta} 
@@ -1341,7 +1341,7 @@ $$
 \mathsf{\Sigma \Tau \Upsilon \Phi \Chi \Psi \Omega}\!
 $$
 
-### 흘림체
+## 흘림체
 
 ```latex
 \mathcal{ABCDEFGHI} 
@@ -1360,7 +1360,7 @@ $$
 \mathcal{STUVWXYZ} \!
 $$
 
-### 흑자체
+## 흑자체
 
 ```latex
 \mathfrak{ABCDEFGHI} 
@@ -1390,7 +1390,7 @@ $$
 $$
 
 
-### 작은 글자
+## 작은 글자
 
 ```latex
 {\scriptstyle\text{abcdefghijklm}}
@@ -1400,7 +1400,7 @@ $$
 $$
 
 
-##  괄호 쓰기 
+#  괄호 쓰기 
 ```latex
 \left ( \frac{1}{2} \right )
 ```
@@ -1411,7 +1411,7 @@ $$
 > `\left` 와 `\right` 를 사용하여, 여러가지 괄호를 사용할 수 있습니다. 
 
 
-### 괄호
+## 괄호
 ```latex
 \left( A \right)
 ``` 
@@ -1419,7 +1419,7 @@ $$
 \left( A \right)
 $$
 
-### 사각 괄호 
+## 사각 괄호 
 ```latex
 \left[ A \right]
 ``` 
@@ -1427,7 +1427,7 @@ $$
 \left[ A \right]
 $$
 
-### 집합괄호
+## 집합괄호
 ```latex
 \left\{ A \right\}
 ```
@@ -1435,7 +1435,7 @@ $$
 \left\{ A \right\}
 $$
 
-### 부등호 괄호 
+## 부등호 괄호 
 ```latex
 \left\langle A \right\rangle
 ```
@@ -1443,7 +1443,7 @@ $$
 \left\langle A \right\rangle
 $$
 
-### 바 
+## 바 
 ```latex
 \left| A \right|
 ```
@@ -1451,7 +1451,7 @@ $$
 \left| A \right|
 $$
 
-### `\left.` 혹은 `\right.` 라고 쓰면, 그 쪽 괄호는 나타나지 않습니다.
+## `\left.` 혹은 `\right.` 라고 쓰면, 그 쪽 괄호는 나타나지 않습니다.
 ```latex
 \left. {A \over B} \right\} \to X
 ```
@@ -1459,7 +1459,7 @@ $$
 \left. {A \over B} \right\} \to X
 $$
 
-### 내림수와 올림수 기호
+## 내림수와 올림수 기호
 ```latex
 \lfloor\sqrt{n}\rfloor  \lceil\sqrt{n}\rceil
 ```
@@ -1468,10 +1468,10 @@ $$
 $$
 
 
-##  빈칸 조정 
+#  빈칸 조정 
 TeX은 빈칸의 크기를 자동으로 조정합니다. 특별히 조정이 필요한 경우는 다음을 사용하면 됩니다.
 
-### double quad space 
+## double quad space 
 ```latex
 a \qquad b
 ``` 
@@ -1479,7 +1479,7 @@ $$
 a \qquad b
 $$
 
-### quad space 
+## quad space 
 ```latex
 a \quad b
 ``` 
@@ -1487,7 +1487,7 @@ $$
 a \quad b
 $$
 
-### text space 
+## text space 
 ```latex
 a\ b
 ``` 
@@ -1495,7 +1495,7 @@ $$
 a\ b
 $$
 
-### large space 
+## large space 
 ```latex
 a\;b
 ``` 
@@ -1503,7 +1503,12 @@ $$
 a\;b
 $$
 
-### small space 
+## medium space 
+```
+a\>b [not supported]
+```
+
+## small space 
 ```latex
 a\,b
 ``` 
@@ -1511,7 +1516,7 @@ $$
 a\,b
 $$
 
-### no space 
+## no space 
 ```latex
 ab
 ``` 
@@ -1519,7 +1524,7 @@ $$
 ab\,
 $$
 
-### negative space 
+## negative space 
 ```latex
 a\!b
 ``` 
