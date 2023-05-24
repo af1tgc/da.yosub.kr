@@ -2,7 +2,7 @@
 title: Latex Guide
 description: 
 published: true
-date: 2023-05-24T08:16:08.949Z
+date: 2023-05-24T08:19:14.411Z
 tags: wikijs, latex, edit
 editor: markdown
 dateCreated: 2023-05-24T07:08:41.095Z
@@ -735,9 +735,11 @@ $$
 
 ```latex
 \amalg \P \S \% \dagger \ddagger \ldots \cdots 
+
+단, wikijs 에서 \P \S 사용 불가
 ```
 $$
-\amalg \P \S \% \dagger \ddagger \ldots \cdots \!
+\amalg \% \dagger \ddagger \ldots \cdots
 $$
 
 ```latex
