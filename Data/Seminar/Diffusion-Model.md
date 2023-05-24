@@ -2,7 +2,7 @@
 title: Diffusion Model
 description: 
 published: true
-date: 2023-05-24T05:45:39.841Z
+date: 2023-05-24T05:48:35.190Z
 tags: ai, deep-learning
 editor: markdown
 dateCreated: 2023-05-24T05:45:39.841Z
@@ -83,5 +83,7 @@ $$
 - 모델은 더해진 노이즈를 예측하고, 빼기를 함으로써 다음 스탭을 예측한다.
 - 즉, 더해진 노이즈를 예측하도록 학습한다.
 $$
-I_0 + E_t = I_t
+I_0 + \epsilon_t = I_t
 $$
+
+# 수식 깊게 이해하기
