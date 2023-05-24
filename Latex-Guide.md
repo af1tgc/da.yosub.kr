@@ -2,7 +2,7 @@
 title: Latex Guide
 description: 
 published: true
-date: 2023-05-24T08:08:29.498Z
+date: 2023-05-24T08:16:08.949Z
 tags: wikijs, latex, edit
 editor: markdown
 dateCreated: 2023-05-24T07:08:41.095Z
@@ -377,9 +377,7 @@ $$
 
 ```latex
 \doteq, \doteqdot,
-``` ```latex
 \overset{\underset{\mathrm{def}}{}}{=},
-``` ```latex
 :=
 ```
 $$
@@ -578,16 +576,20 @@ $$
 
 ```latex
 \or \lor \vee, \curlyvee, \bigvee 
+
+단, wikijs 에서 \or 사용불가
 ```
 $$
-\or \lor \vee, \curlyvee, \bigvee \!
+\lor \vee, \curlyvee, \bigvee \!
 $$
 
 ```latex
 \and \land \wedge, \curlywedge, \bigwedge 
+
+단, wikijs 에서 \and 사용불가
 ```
 $$
-\and \land \wedge, \curlywedge, \bigwedge \!
+\land \wedge, \curlywedge, \bigwedge \!
 $$
 
 ```latex
