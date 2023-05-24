@@ -2,7 +2,7 @@
 title: Latex Guide
 description: 
 published: true
-date: 2023-05-24T08:27:00.158Z
+date: 2023-05-24T08:27:50.743Z
 tags: wikijs, latex, edit
 editor: markdown
 dateCreated: 2023-05-24T07:08:41.095Z
@@ -972,7 +972,6 @@ $$
 ## 분수 
 ```latex
 \frac{2}{4}
-``` or ```latex
 {2 \over 4}
 ``` 
 $$
