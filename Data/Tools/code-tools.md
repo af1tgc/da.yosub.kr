@@ -2,7 +2,7 @@
 title: Code Tools
 description: 
 published: true
-date: 2023-07-14T01:43:38.430Z
+date: 2023-07-14T01:48:34.080Z
 tags: python, pandas, tool, code-sample
 editor: markdown
 dateCreated: 2023-07-14T01:43:38.430Z
@@ -46,6 +46,12 @@ df['ncol'] = df.apply(lambda x : replace_func(x['col']), axis = 1)
 df_diff = df[df['sim'] < 0.1 ]
 ```
 
+# scipy
+## np.array to csr_matrix
+```python
+from scipy import sparse
+csr = sparse.csr_matrix(nparr)
+```
 
 
 # Natives
@@ -121,7 +127,26 @@ plt.plot(range(1, 25), sse, marker='o')
 plt.show()
 ```
 
+## Word2Vec
+```python
+from nltk.tokenize import sent_tokenize, word_tokenize
+from gensim.models import Word2Vec
+from gensim.models import KeyedVectors
 
+result = [word_tokenize(sentence) for sentence in df['real_name'].tolist()]
+model = Word2Vec(sentences=result, vector_size=100, window=5, min_count=5, workers=4, sg=0)
+
+# w2v result with sentense (average)
+embedded_vector = []
+for r in result:
+    svector = []
+    for r in result[0]:
+        svector.append(model.wv[r])
+
+    embedded_vector.append(np.average(svector, axis=0))
+
+embedded_vector[0]
+```
 
 
 
