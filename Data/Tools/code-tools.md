@@ -2,7 +2,7 @@
 title: Code Tools
 description: 
 published: true
-date: 2023-07-14T01:48:34.080Z
+date: 2023-07-28T00:58:39.936Z
 tags: python, pandas, tool, code-sample
 editor: markdown
 dateCreated: 2023-07-14T01:43:38.430Z
@@ -40,6 +40,16 @@ def replace_func(x):
 
 df['ncol'] = df.apply(lambda x : replace_func(x['col']), axis = 1)
 ````
+
+## Drop Columns if Exists
+```python
+df = pd.DataFrame({'row_num':[1,2], 'w':[3,4]})
+df = df.drop(['row_num','start_date','end_date','symbol'], axis=1, errors='ignore')
+print (df)
+   w
+0  3
+1  4
+```
 
 ## Get Rows with Conditional
 ```python
