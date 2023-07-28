@@ -2,7 +2,7 @@
 title: Code Tools
 description: 
 published: true
-date: 2023-07-28T00:58:39.936Z
+date: 2023-07-28T01:49:32.204Z
 tags: python, pandas, tool, code-sample
 editor: markdown
 dateCreated: 2023-07-14T01:43:38.430Z
@@ -49,6 +49,32 @@ print (df)
    w
 0  3
 1  4
+```
+
+## Read All csv Files as 1 DF
+```python
+import pandas as pd
+import glob
+import os
+
+path = r'C:\DRO\DCL_rawdata_files' # use your path
+all_files = glob.glob(os.path.join(path , "/*.csv"))
+
+li = []
+
+for filename in all_files:
+    df = pd.read_csv(filename, index_col=None, header=0)
+    li.append(df)
+
+frame = pd.concat(li, axis=0, ignore_index=True)
+```
+
+Or, with attribution to a comment from Sid.
+
+```
+all_files = glob.glob(os.path.join(path, "*.csv"))
+
+df = pd.concat((pd.read_csv(f) for f in all_files), ignore_index=True)
 ```
 
 ## Get Rows with Conditional
